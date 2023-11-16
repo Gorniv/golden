@@ -82,9 +82,11 @@ class _TestDeviceGoldens {
   static Future<void> _setSurfaceSize(
       WidgetTester tester, Device device) async {
     await tester.binding.setSurfaceSize(device.size);
+    // / Use WidgetTester.platformDispatcher or WidgetTester.view instead
     tester.binding.window.physicalSizeTestValue = device.size;
     tester.binding.window.devicePixelRatioTestValue = 1.0;
-    tester.binding.window.textScaleFactorTestValue = device.textScale;
+    tester.binding.platformDispatcher.textScaleFactorTestValue =
+        device.textScale;
   }
 
   static const String goldenTag = 'golden';
