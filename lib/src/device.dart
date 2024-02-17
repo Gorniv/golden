@@ -23,50 +23,50 @@ class Device {
     devicePixelRatio: 2,
   );
 
-  /// [iphone11] matches specs of iphone11, but with lower DPI for performance
-  static const Device iphone11 = Device(
+  /// [iPhone11] matches specs of iphone11, but with lower DPI for performance
+  static const Device iPhone11 = Device(
     name: 'iphone11',
     size: Size(828, 1792),
     devicePixelRatio: 2.0,
     safeArea: EdgeInsets.only(top: 44, bottom: 34),
   );
 
-  static const Device iphone11Pro = Device(
+  static const Device iPhone11Pro = Device(
     name: 'iphone11Pro',
     size: Size(1125, 2436),
     devicePixelRatio: 3.0,
     safeArea: EdgeInsets.only(top: 44, bottom: 34),
   );
 
-  static const Device iphone11ProMax = Device(
+  static const Device iPhone11ProMax = Device(
     name: 'iphone11ProMax',
     size: Size(1242, 2688),
     devicePixelRatio: 3.0,
     safeArea: EdgeInsets.only(top: 44, bottom: 34),
   );
 
-  static const Device iphone14 = Device(
+  static const Device iPhone14 = Device(
     name: 'iphone14',
     size: Size(1170, 2532),
     devicePixelRatio: 3.0,
     safeArea: EdgeInsets.only(top: 44, bottom: 34),
   );
 
-  static const Device iphone14Plus = Device(
+  static const Device iPhone14Plus = Device(
     name: 'iphone14Plus',
     size: Size(1284, 2778),
     devicePixelRatio: 3.0,
     safeArea: EdgeInsets.only(top: 44, bottom: 34),
   );
 
-  static const Device iphone15Pro = Device(
+  static const Device iPhone15Pro = Device(
     name: 'iphone15Pro',
     size: Size(1179, 2556),
     devicePixelRatio: 3.0,
     safeArea: EdgeInsets.only(top: 44, bottom: 34),
   );
 
-  static const Device iphone15ProMax = Device(
+  static const Device iPhone15ProMax = Device(
     name: 'iphone15ProMax',
     size: Size(1290, 2796),
     devicePixelRatio: 3.0,
@@ -110,6 +110,21 @@ class Device {
     name: 'tablet_portrait',
     size: Size(2048, 2732),
     devicePixelRatio: 2.0,
+  );
+
+  static const Device fullHd = Device(
+    name: 'FullHd',
+    size: Size(1920, 1800),
+    devicePixelRatio: 1,
+  );
+  static const Device macOS = Device(
+    name: 'macOS',
+    size: Size(2880, 1800),
+    devicePixelRatio: 2,
+  );
+  static const Device uHD4k = Device(
+    name: 'UHD4k',
+    size: Size(3840, 2160),
   );
 
   final String name;

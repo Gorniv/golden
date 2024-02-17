@@ -4,10 +4,11 @@ import 'package:flutter/widgets.dart';
 import 'package:golden/src/theme.dart';
 import 'package:golden/src/device.dart';
 import 'package:meta/meta.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_test/flutter_test.dart';
 
 const List<Locale> defaultLocales = <Locale>[Locale('us', 'US')];
-const List<Device> defaultDevices = <Device>[Device.iphone11];
+const List<Device> defaultDevices = <Device>[Device.iPhone11];
 final List<NamedTheme> defaultThemes = [NamedTheme.defaultTheme];
 
 @isTestGroup
@@ -81,10 +82,10 @@ class _TestDeviceGoldens {
 
   static Future<void> _setSurfaceSize(
       WidgetTester tester, Device device) async {
-    await tester.binding.setSurfaceSize(device.size / device.devicePixelRatio);
-    tester.binding.window.physicalSizeTestValue =
-        device.size / device.devicePixelRatio;
-    tester.binding.window.devicePixelRatioTestValue = device.devicePixelRatio;
+    tester.view.physicalSize = device.size / device.devicePixelRatio;
+    tester.view.devicePixelRatio =
+        1; // always null because of the physicalSize can't be screen size resolution
+    //device.devicePixelRatio;
     tester.binding.platformDispatcher.textScaleFactorTestValue =
         device.textScale;
   }

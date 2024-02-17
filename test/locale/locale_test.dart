@@ -43,7 +43,7 @@ void main() {
           );
         },
         devices: [
-          Device.iphone11,
+          Device.iPhone11,
         ],
         locales: locales,
       );
@@ -63,7 +63,7 @@ void main() {
           );
         },
         devices: [
-          Device.iphone11,
+          Device.iPhone11,
         ],
         locales: [
           const Locale('en'),
@@ -135,11 +135,11 @@ class CrashWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Row(
-        children: const [
+        children: [
           Text(
-              'Test crash sdkfhksd sdkfhjsd lkjflsdkj sdfljlksdf slkdfjlksdj sdfjlskdjf sdkfjlksdf sdlkfjsdlkf sdklfjlksdjf slkdjfklskdfj lksdjflksdjf'),
+              'Test crash and make sure the golden test will fail because of this row is not wrapped with a Material widget'),
         ],
       ),
     );
