@@ -99,10 +99,18 @@ class Device {
   );
 
   /// [tabletLandscape] example of tablet that in landscape mode
-  static const Device tabletLandscape = iPadPro129Landscape;
+  static const Device tabletLandscape = Device(
+    name: 'tablet_landscape',
+    size: Size(2732, 2048),
+    devicePixelRatio: 2.0,
+  );
 
   /// [tabletPortrait] example of tablet that in portrait mode
-  static const Device tabletPortrait = iPadPro129;
+  static const Device tabletPortrait = Device(
+    name: 'tablet_portrait',
+    size: Size(2048, 2732),
+    devicePixelRatio: 2.0,
+  );
 
   final String name;
   final Size size;

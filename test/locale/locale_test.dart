@@ -16,7 +16,7 @@ const locales = <Locale>[
 void main() {
   setUpAll(() async {});
 
-  /// flutter test --update-goldens test/golden_test.dart
+  /// flutter test --update-goldens test/locale/locale_test.dart
   group(
     'Example golden -',
     () {
