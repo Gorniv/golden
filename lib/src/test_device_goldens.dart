@@ -82,9 +82,9 @@ class _TestDeviceGoldens {
 
   static Future<void> _setSurfaceSize(
       WidgetTester tester, Device device) async {
-    tester.view.physicalSize = device.size / device.devicePixelRatio;
-    tester.view.devicePixelRatio =
-        1; // always null because of the physicalSize can't be screen size resolution
+    tester.view.physicalSize = device.size;
+    tester.view.devicePixelRatio = device
+        .devicePixelRatio; // always null because of the physicalSize can't be screen size resolution
     //device.devicePixelRatio;
     tester.binding.platformDispatcher.textScaleFactorTestValue =
         device.textScale;
