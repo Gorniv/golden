@@ -31,7 +31,7 @@ void main() {
             device,
             locale,
             theme,
-            scenarioName: 'crash',
+            scenarioName: 'sizes',
             scenario: (_) async {
               await exampleTester.init();
             },
@@ -39,9 +39,12 @@ void main() {
         },
         devices: [
           Device.iPhone5S,
+          Device.iPhone5SLandscape,
           Device.iPhone11,
           Device.iPhone11Pro,
+          Device.iPhone11ProLandscape,
           Device.iPhone11ProMax,
+          Device.iPhone11ProMaxLandscape,
           Device.iPhone14,
           Device.iPhone14Plus,
           Device.iPhone15Pro,
@@ -53,6 +56,11 @@ void main() {
           Device.fullHd,
           Device.macOS,
           Device.uHD4k,
+          Device.iPadPro129,
+          Device.iPadPro129Landscape,
+          Device.iPadAirGen5,
+          Device.iPad7102,
+          Device.iPad7102Landscape,
         ],
         locales: [
           const Locale('en'),

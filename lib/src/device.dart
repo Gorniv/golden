@@ -127,6 +127,62 @@ class Device {
     size: Size(3840, 2160),
   );
 
+// flutter: 2.0
+// flutter: 590.0
+// flutter: 1180.0
+// 1640 x 2360px
+  static const Device iPadAirGen5 = Device(
+    name: 'iPad_Air_Gen5',
+    size: Size(1640, 2360),
+    devicePixelRatio: 2.0,
+  );
+
+  static const Device iPadAirGen5Landscape = Device(
+    name: 'iPad_Air_Gen5_Landscape',
+    size: Size(2360, 1640),
+    devicePixelRatio: 2.0,
+  );
+
+  static const Device iPad7102 = Device(
+    name: 'iPad_7_10.2',
+    size: Size(2160, 1620),
+    devicePixelRatio: 2.0,
+  );
+
+  static const Device iPad7102Landscape = Device(
+    name: 'iPad_7_10.2_Landscape',
+    size: Size(2160, 1620),
+    devicePixelRatio: 2.0,
+  );
+
+  static const Device iPhone5SLandscape = Device(
+    name: "iPhone5S_Landscape",
+    size: Size(1136, 640),
+    devicePixelRatio: 2,
+  );
+
+  /// [iPhone11] matches specs of iphone11, but with lower DPI for performance
+  static const Device iPhone11Landscape = Device(
+    name: "iphone11_Landscape",
+    size: Size(1792, 828),
+    devicePixelRatio: 2.0,
+    safeArea: EdgeInsets.only(left: 44, right: 34),
+  );
+
+  static const Device iPhone11ProLandscape = Device(
+    name: "iphone11Pro_Landscape",
+    size: Size(2436, 1125),
+    devicePixelRatio: 3.0,
+    safeArea: EdgeInsets.only(left: 44, right: 34),
+  );
+
+  static const Device iPhone11ProMaxLandscape = Device(
+    name: "iphone11ProMax_Landscape",
+    size: Size(2688, 1242),
+    devicePixelRatio: 3.0,
+    safeArea: EdgeInsets.only(left: 44, right: 34),
+  );
+
   final String name;
   final Size size;
   final double devicePixelRatio;
